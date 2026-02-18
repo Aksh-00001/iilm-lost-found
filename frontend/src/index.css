@@ -1,0 +1,102 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * {
+    box-sizing: border-box;
+  }
+
+  body {
+    font-family: 'DM Sans', system-ui, sans-serif;
+    @apply bg-slate-50 text-slate-800;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  h1, h2, h3, h4 {
+    font-family: 'Playfair Display', Georgia, serif;
+  }
+
+  ::-webkit-scrollbar {
+    width: 6px;
+  }
+
+  ::-webkit-scrollbar-track {
+    @apply bg-slate-100;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    @apply bg-navy-400 rounded-full;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply bg-navy-800 text-white px-6 py-3 rounded-xl font-medium
+           hover:bg-navy-700 transition-all duration-200 
+           shadow-sm hover:shadow-md active:scale-95;
+  }
+
+  .btn-secondary {
+    @apply bg-white text-navy-800 border border-navy-200 px-6 py-3 rounded-xl font-medium
+           hover:bg-navy-50 transition-all duration-200
+           shadow-sm hover:shadow-md active:scale-95;
+  }
+
+  .btn-danger {
+    @apply bg-red-600 text-white px-6 py-3 rounded-xl font-medium
+           hover:bg-red-700 transition-all duration-200 active:scale-95;
+  }
+
+  .card {
+    @apply bg-white rounded-2xl shadow-sm border border-slate-100 overflow-hidden
+           transition-all duration-300 hover:shadow-md;
+  }
+
+  .input-field {
+    @apply w-full px-4 py-3 rounded-xl border border-slate-200 
+           bg-white text-slate-800 placeholder-slate-400
+           focus:outline-none focus:ring-2 focus:ring-navy-400 focus:border-transparent
+           transition-all duration-200 font-body;
+  }
+
+  .badge-lost {
+    @apply bg-red-100 text-red-700 text-xs font-semibold px-3 py-1 rounded-full uppercase tracking-wide;
+  }
+
+  .badge-found {
+    @apply bg-green-100 text-green-700 text-xs font-semibold px-3 py-1 rounded-full uppercase tracking-wide;
+  }
+
+  .badge-active {
+    @apply bg-blue-100 text-blue-700 text-xs font-semibold px-3 py-1 rounded-full uppercase tracking-wide;
+  }
+
+  .badge-claimed {
+    @apply bg-amber-100 text-amber-700 text-xs font-semibold px-3 py-1 rounded-full uppercase tracking-wide;
+  }
+
+  .badge-resolved {
+    @apply bg-slate-100 text-slate-600 text-xs font-semibold px-3 py-1 rounded-full uppercase tracking-wide;
+  }
+
+  .page-title {
+    font-family: 'Playfair Display', Georgia, serif;
+    @apply text-3xl font-bold text-navy-900;
+  }
+
+  .section-title {
+    font-family: 'Playfair Display', Georgia, serif;
+    @apply text-2xl font-semibold text-navy-800;
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+
+  .skeleton {
+    @apply animate-pulse bg-slate-200 rounded-lg;
+  }
+}
